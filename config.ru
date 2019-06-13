@@ -2,8 +2,7 @@ path = File.expand_path("../", __FILE__)
 
 require 'rubygems'
 require 'sinatra'
-require 'dotenv'
+require 'dotenv/load'
 require "#{path}/app"
 
-Dotenv.load
 run Sinatra::Application

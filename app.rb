@@ -6,6 +6,6 @@ get '/' do
 end 
 
 get '/cards' do 
-  @cards = CARDS.find()
+  @cards = CARDS.find().limit(20)
   erb :cards 
 end 

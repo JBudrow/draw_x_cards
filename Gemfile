@@ -8,7 +8,12 @@ gem 'bson_ext'
 gem 'sinatra'
 # Reloading rack development server
 gem 'shotgun'
-# An IRB alternative and runtime developer console
-gem 'pry'
 # A Ruby gem to load environment variables from `.env`
 gem 'dotenv'
+
+group :development, :test do
+  # An IRB alternative and runtime developer console
+  gem 'pry'
+  # Pure-Ruby Readline Implementation
+  gem 'rb-readline'
+end

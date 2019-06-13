@@ -10,3 +10,5 @@ gem 'sinatra'
 gem 'shotgun'
 # An IRB alternative and runtime developer console
 gem 'pry'
+# A Ruby gem to load environment variables from `.env`
+gem 'dotenv'

@@ -6,3 +6,4 @@ CLIENT =  Mongo::Client.new(ENV["MONGODB_URI"])
 DB     = CLIENT.database
 # Mongo::Collection
 CARDS  = CLIENT[:cards]
+SETS   = CLIENT[:sets]

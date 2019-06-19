@@ -1,0 +1,37 @@
+<div class='container'>
+  <table class='table table-striped table-hover'>
+    <thead>
+      <th scope='col' style='font-size: small; border: none;'>set</th>
+      <th scope='col' style='font-size: small; border: none;'>type</th>
+      <th scope='col' style='font-size: small; border: none;'>cards</th>
+      <th scope='col' style='font-size: small; border: none;'>value</th>
+      <th scope='col' style='font-size: small; border: none;'>release</th>
+    <tbody>
+      <% @sets.each do |set| %>
+        <tr onclick="window.location='#'" style='cursor: pointer;'></td>
+          <td>
+            <img src='<%= set['icon_svg_uri'] %>' style='height:1.5rem; padding-right: 5px; max-width: 19px;'></>
+            <span>
+              <%= set['name'] %>
+            </span>
+            <span style='font-size: small; color: lightgrey;'>
+              <%= "[#{set['code'].upcase}]" %>
+            </span>
+          </td>
+          <td>
+            <%= set['set_type'].capitalize %>
+          </td>
+          <td>
+            <%= set['card_count'] %>
+          </td>
+          <td>
+            baz
+          </td>
+          <td>
+            <%= set['released_at'] %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

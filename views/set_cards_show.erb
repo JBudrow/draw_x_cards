@@ -1,0 +1,7 @@
+<ul class="valign-wrapper container card-images">
+  <% @cards.each do |card| %>
+    <li class="responsive-img col s4" style="list-style: none;">
+      <img src="<%= card['image_uris']['small'] %></>
+    </li>
+  <% end %>
+</ul>

@@ -16,8 +16,8 @@ get '/cards' do
 end 
 
 # GET cards#show
-get '/cards/:set/:name' do 
-  @card = CARDS.find(set: params[:set], name: params[:name])
+get '/sets/:set/:collector_number' do 
+  @card = CARDS.find(set: params[:set], collector_number: params[:collector_number]).first
   erb :cards_show
 end 
 
@@ -31,6 +31,6 @@ end
 
 # GET sets#show
 get '/sets/:set' do 
-  @cards = CARDS.find(set: params[:set])
+  @cards = CARDS.find(set: params[:set]).limit(20)
   erb :set_cards_show
 end 

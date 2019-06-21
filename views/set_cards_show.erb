@@ -1,9 +1,8 @@
-<ul class="valign-wrapper container card-images">
+<div class="container" style="max-width: 100em;">
   <% @cards.each do |card| %>
-    <li class="responsive-img col s4" style="list-style: none;">
       <a href="/sets/<%= card['set'] %>/<%= card['collector_number'] %>">
-        <img src="<%= card['image_uris']['small'] %></>
+        <img class="img-fluid" style="margin: 0.75rem;" src="<%= card['image_uris']['small'] %>">
       </a>
-    </li>
   <% end %>
-</ul>
+</div>
+
